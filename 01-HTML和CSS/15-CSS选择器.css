@@ -1,0 +1,27 @@
+/* 元素选择器: 选择器{属性名:属性值;属性名2:属性值2;...} */
+div {
+  border: 1px solid blue;
+  font-size: 10px;
+  color: blue;
+}
+/* id选择器: 任何标签都可以添加id属性，并且一个页面的id应该保持唯一性
+	#id{属性名:属性值;属性名2:属性值2;...} */
+#abc {
+  border: 5px solid red;
+  font-size: 20px;
+  color: red;
+}
+/* 类选择器: 任何标签都可以添加class属性，并且class属性是可以相同的
+			.class值{键1:值1;键2:值2.......} */
+.aaa {
+  border: 10px solid green;
+  font-size: 30px;
+  color: green;
+}
+/* 包含选择器:
+      祖先选择器 子选择器{键1:值1;键2:值2.......} */
+#abc .ccc {
+  border: 10px solid yellow;
+  font-size: 30px;
+  color: yellow;
+}

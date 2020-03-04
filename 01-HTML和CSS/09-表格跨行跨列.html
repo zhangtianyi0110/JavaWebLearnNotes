@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- colspan表示跨列 rowspan表示跨行-->
+  <table border="1" width="300" height="300" align="center" cellspacing="0">
+    <thead> <!--  thhead表示表头 -->
+      <th>第1列</th>
+      <th>第2列</th><!--  th是字体加粗的td标签一般用在表头 -->
+      <th>第3列</th>
+    </thead>
+    <tr><!-- 行 -->
+      <td colspan="2">1-1</td><!-- 第一行的第一列跨2列 -->
+      <td>1-3</td>
+    </tr>
+    <tr><!-- 行 -->
+      <td rowspan="2">2-1</td><!-- 第二行的第一列跨2行 -->
+      <td colspan="2" rowspan="2">2-2</td><!-- 第二行的第二列跨2行2列 -->
+    </tr>
+    <tr><!-- 行 -->
+
+    </tr>
+  </table>
+</body>
+</html>

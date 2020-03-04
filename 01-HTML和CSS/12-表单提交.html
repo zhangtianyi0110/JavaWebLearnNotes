@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- form标签就是表单
+action属性是设置提交的服务器地址
+method设置的死提交的方式 GET(默认)
+-->
+<form action="http://localhost:8080" method="GET">
+  <h1 align="center"> 用户注册</h1>
+  <table cellspacing="0" align="center">
+    <tr>
+      <td>用户名：</td>
+      <td>
+        <input type="text" name="username" value="user"/><br>
+      </td>
+    </tr>
+    <tr>
+      <td>密码：</td>
+      <td>
+        <input type="password"name="password" value="123"/><br>
+      </td>
+    </tr>
+    <tr>
+      <td>确认密码：</td>
+      <td>
+        <input type="password" name="password2" value="123"/><br>
+      </td>
+    </tr>
+    <tr>
+      <td>性别：</td>
+      <td>
+        <input type="radio" name="sex" checked="checked" value="1">男
+        <input type="radio" name="sex" value="2">女<br>
+      </td>
+    </tr>
+    <tr>
+      <td> 兴趣爱好：</td>
+      <td>
+        <input type="checkbox" name="hobby" value="java" checked="checked">java
+        <input type="checkbox" name="hobby" value="python" checked="checked">python
+        <input type="checkbox" name="hobby" value="c++">c++<br>
+      </td>
+    </tr>
+    <tr>
+      <td> 国籍：</td>
+      <td>
+        <select name="nation">
+          <option>--请选择国籍--</option>
+          <option value="1" selected="selected">中国</option>
+          <option value="2">美国</option>
+          <option value="3">英国</option>
+        </select><br>
+      </td>
+    </tr>
+    <tr>
+      <td>  自我评价：</td>
+      <td>
+        <textarea cols="30" rows="10" name="desc">desc</textarea><br>
+      </td>
+    </tr>
+    <tr>
+      <td> <input type="reset" value="重置"><input type="submit" value="提交"></td>
+      <td><input type="button" value="普通按钮"><input type="file" value="提交文件"></td>
+    </tr>
+  </table>
+  <input type="hidden" name="1111" value="abc"><br>
+
+</form>
+</body>
+</html>

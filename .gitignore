@@ -1,0 +1,44 @@
+node_modules
+HELP.md
+target/
+.mvn
+mvnw
+mvnw.cmd
+
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.DS_Store
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+SpringBoot-Exception/src/main/resources/rebel-remote.xml
+SpringBoot-Exception/src/main/resources/static/
+SpringBoot-Exception/src/main/resources/templates/
+src/main/resources/static/
+src/main/resources/templates/
+/.mvn/wrapper/maven-wrapper.properties
+src/main/resources/rebel-remote.xml
+.rebel-remote.xml.bak
