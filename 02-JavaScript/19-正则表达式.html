@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    //表示要求字符串中是否包含字母e
+    var patt = new RegExp("e")
+    console.log(patt.test("abcde"))//true
+    console.log(patt.test("abcdE"))//flase
+    var patt2 = /e/ //等价于var patt = new RegExp("e")
+
+    // 表示要求字母a或者b或者c
+    var patt3 = /[abc]/
+    console.log(patt2.test("a123"))
+
+    //表示要求字符串是否包含小写字母
+    var patt4 = /[a-z]/
+    //表示字符串是否包含任意大写字母
+    var patt4 = /[A-Z]/
+    //表示字符串是否包含任意数字
+    var patt5 = /[0-9]/
+    //表示要求字符串是否包含字母数字下划线
+    var patt6 = /\w/
+    //表示要求字符串是否包含至少一个a
+    var patt7 = /a+/
+    //表示要求字符串是否包含0个或者多个a
+    var patt8 = /a*/
+    //表示要求字符串是否包含一个或者0个a
+    var patt9 = /a?/
+    //表示是否包含连续三个a
+    var patt10 = /a{3}/
+    //表示是否包含3-5个a
+    var patt11 = /a{3,5}/
+    //表示是否包含至少三个连续a
+    var patt12 = /a{3,}/
+    //表示必须以a开始
+    var patt13 = /^a/
+    //表示必须以a结束
+    var patt14 = /a$/
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

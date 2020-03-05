@@ -1076,3 +1076,205 @@ navigator.userAgent
 ```
 
 ![](./images/23.png)
+
+## 7.其他补充
+
+### 7.1正则表达式对象
+
+​		**创建:**
+
+1. **/正则表达式/flags**
+2. **new RegExp("正则表达式","flags")**
+
+​				**flags:**
+
+​					**i    忽略大小写**
+
+​					**g    全局匹配**
+
+​					**ig   同时使用上面两种**
+
+​		**方法:**
+
+​			**test     查看是否匹配  匹配则返回true  不匹配返回false**	
+
+```js
+    //表示要求字符串中是否包含字母e
+    var patt = new RegExp("e")
+    console.log(patt.test("abcde"))//true
+    console.log(patt.test("abcdE"))//flase
+    var patt2 = /e/ //等价于var patt = new RegExp("e")
+
+    // 表示要求字母a或者b或者c
+    var patt3 = /[abc]/
+    console.log(patt2.test("a123"))
+
+    //表示要求字符串是否包含小写字母
+    var patt4 = /[a-z]/
+    //表示字符串是否包含任意大写字母
+    var patt4 = /[A-Z]/
+    //表示字符串是否包含任意数字
+    var patt5 = /[0-9]/
+    //表示要求字符串是否包含字母数字下划线
+    var patt6 = /\w/
+    //表示要求字符串是否包含至少一个a
+    var patt7 = /a+/
+    //表示要求字符串是否包含0个或者多个a
+    var patt8 = /a*/
+    //表示要求字符串是否包含一个或者0个a
+    var patt9 = /a?/
+    //表示是否包含连续三个a
+    var patt10 = /a{3}/
+    //表示是否包含3-5个a
+    var patt11 = /a{3,5}/
+    //表示是否包含至少三个连续a
+    var patt12 = /a{3,}/
+    //表示必须以a开始
+    var patt13 = /^a/
+    //表示必须以a结束
+    var patt14 = /a$/
+```
+
+### 7.2其他补充
+
+> 操作属性节点
+
+​	**第一种:**
+
+​		**元素节点.属性名=值**
+
+​		**元素节点.属性名**
+
+​	**第二种：**
+
+​		**元素节点.setAttribute(键，值)**
+
+​		**元素节点.getAttribute(键)**
+
+​	**一般的属性可以通过第一种方式操作，如果发现第一种操作不能获取到属性，通过第二种方式一定可以操作。**
+
+> JS操作CSS
+
+**1)操作css的单个属性**
+
+​		**元素节点.style.属性名=值**
+
+​			**注意点:**
+
+​				**1.属性名如果本身有-，则会将-去掉并且将后面的那个字母转为大写。   例如:  font-size     background-color**
+
+​				**2.如果属性没有设置则属性默认的值是空字符串**
+
+​	**2)操作整个style属性**
+
+​		**元素节点.style.cssText="属性:值;属性:值....."**
+
+​	**3)操作class属性**
+
+​		**1.元素节点.className="值"**
+
+​		**2.元素节点.setAttribute("class","值")**
+
+> 表单
+
+**获取表单的专用方式:**
+
+​		**document.formName**   
+
+​		**document.forms[id]**  
+
+​		**document.forms[idx]**  
+
+​		**document.forms[name]**
+
+​	**表单的属性:**
+
+​		**action**
+
+​		**method**
+
+​		**id**
+
+​		**name**
+
+​		**elements    获取该表单下的表单域元素集合**
+
+​		**...**
+
+​	**表单的方法:**
+
+​		**form对象.submit()    提交表单**
+
+​		**form对象.reset()     重置表单**
+
+​	**表单的事件:**
+
+​		**onsubmit     在表单提交的时候触发**
+
+​		**onreset      在表单重置的时候触发**
+
+**表单域元素:**
+
+​	**获取表单域元素的专用方式:**
+
+​		**form对象.表单域name**
+
+​		**form对象.elements[idx]**
+
+​		**form对象.elements[id]**
+
+​		**form对象.elements[name]**
+
+​		
+
+​	**表单域的属性:**
+
+​		**type**
+
+​		**value**
+
+​		**name**
+
+​		**disabled    失效，灰掉           值不可以修改，并且提交的时候不会提交**   
+
+​		**readonly    只读                 值不可以修改，但是提交的时候可以提交**
+
+​		**form        获取该表单域元素所在的表单对象**
+
+​	
+
+​	**表单域的方法:**
+
+​		**表单域.focus()   使之成为焦点**
+
+​		**表单域.blur()    使之失去焦点**
+
+**文本域(text,password,textarea):**
+
+​	**获取当前值:**
+
+​		**value**
+
+​	**获取默认值:**
+
+​		**defaultValue**
+
+​	**补充:**
+
+​		**placeholder    文本域中灰色的默认字体**
+
+**单选按钮:**
+
+​	**获取单选按钮的值:**
+
+​		**1)遍历单选按钮集合，查看checked属性，为true则为选中。**
+
+​		**2)表单对象.单选按钮name.value**   
+
+**下拉列表:**
+
+​	**获取值:**
+
+​		**1)遍历option集合，查看selected属性，为true则为选中。(获取option集合，1.通过getChildNodes(select对象)      2.select对象.options)**
+
+​		**2)直接通过select对象.value**
