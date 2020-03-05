@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    //eval(字符串形式的js代码)：
+    eval("var a = {name: 'zzz', age: 18}")
+    console.log("a的姓名：" + a.name + "a的年龄：" + a.age)
+    //parseInt(字符串) parseInt("100px")-->100 可以用来操作像素px
+    console.log(parseInt("123"))
+    console.log(parseInt("123px"))
+    //parseFloat(字符串)
+    console.log(parseFloat("10.2"))
+    //isNaN
+    console.log("123是NaN:" + isNaN("123"))//false
+    console.log("123abc是NaN:" + isNaN("123abc"))//true
+    //isFinite
+    console.log(isFinite("123"))//true
+    var c = 1/0;
+    console.log(isFinite(c))//false
+    //alert(内容)
+    alert("这是警告框")
+    //prompt(内容)
+    prompt("这是询问框")
+    //confirm(内容)
+    confirm("这是内容框")
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

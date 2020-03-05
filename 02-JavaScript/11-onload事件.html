@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    //onload事件调用的方法
+    function onloadfun(a, b) {
+      let c = a + b
+      alert('静态注册onload事件,a+b='+ c)
+    }
+  </script>
+</head>
+<!-- 静态注册onload事件
+    onload事件是浏览器解析完页面之后就会自动触发的事件 -->
+<body onload="onloadfun(1,2)">
+
+</body>
+</html>
+
+
+
+

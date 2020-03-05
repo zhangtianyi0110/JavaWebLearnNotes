@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    var a = new Array(0, "a", null, true)
+    console.log(a.length)//4
+    var b = new Array(5)
+    console.log(b.length)//5
+    var c = [0, "a", null, false]
+    console.log(c[3])//第四个元素是false，索引是3
+
+    c.push("123")//push可以添加多个元素 ， 尾部添加
+    console.log(c[4])//"123"
+    var i =  c.pop()//pop移除最后一个元素并返回
+    console.log(i)//"123"
+    var d = c.unshift("abc")//往数组的前面添加一个或多个元素，并且返回新数组的长度
+    console.log(d)//新数组长度为5
+    var e = c.shift()//移除数组的第一个元素并且返回该元素
+    console.log(e)//"abc"
+    var aa = [0, 1, 2, 3]
+    console.log(String(aa))
+    aa.splice(1,1,"aaa", "bbb")//在索引为1的地方开始删除1个元素，在删除后加上2个元素
+    console.log(String(aa))// aa = [0, "aaa", "bbb", 2, 3]
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

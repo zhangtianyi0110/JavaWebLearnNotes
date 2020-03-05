@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    //onblur事件调用的方法
+    function fun1() {
+      alert('静态注册onblur事件')
+    }
+    //动态注册onblur事件
+    window.onload = function (a, b) {
+      //1.获取标签对象,document是js提供的一个文档对象
+      var input1 = document.getElementById("input1")
+      //2.通过标签对象.事件名 = function(){}
+      input1.onblur = function () {
+        alert('动态注册onblur事件')
+      }
+    }
+  </script>
+</head>
+<body>
+  用户名：<input type="text" onblur="fun1()"><br>
+  密码：<input type="text" id="input1">
+</body>
+</html>
+
+
+
+

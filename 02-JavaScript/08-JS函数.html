@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+  //匿名自调用函数
+    (function (p) {
+      console.log("匿名自调用函数:" + p)
+     })(1)
+    //第一种function 函数名(形参列表){函数体}
+    function fun1(p) {
+      console.log("第一种方式定义的形参是：" + p)
+    }
+    fun1("函数1")
+    //第二种var 函数名=function(形参列表){函数体}
+    var fun2 = function(p) {
+      console.log("第二种方式定义的形参是：" + p)
+    }
+    fun2("函数2")
+    //第三种var 函数名=new Function(形参列表，函数体);注意  参数全部必须用字符串格式。
+    var fun3 = new Function("p", "console.log('第三种方式定义的形参是：' + p)")
+    fun3("函数3")
+    //测试重载覆盖和加载顺序
+    var testSame = function () {
+      console.log("我使用第二种定义函数的方式定义在前面")
+    }
+    function testSame() {
+      console.log("我使用第一种定义函数的方式定义在后面")
+    }
+    testSame()
+    //隐形参数 arguments
+    function testArg() {
+      console.log(arguments.length)
+      for (let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i])
+      }
+    }
+    testArg(1, "aa", false)
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

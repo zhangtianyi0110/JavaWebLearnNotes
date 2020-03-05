@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    var i
+    console.log(i)//undefined,只声明未初始化的i是undefined
+    i = 12 //此时i的类型是number
+    console.log(typeof(i))//typeof()是js语言提供的一个行数用来查看数据类型
+    i = "abc"
+    console.log(typeof(i))//此时i的类型是string
+    var a = 12
+    var b = "abc"
+    console.log(a * b)//打印a * b 的值是NaN 非数字非数值 但是是number类型
+    console.log(typeof(a * b))
+  </script>
+</head>
+<body>
+
+</body>
+</html>

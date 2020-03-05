@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    var a = 12
+    String(a)//传什么出来什么的字符串格式，类似于java的对象.toString(),变量+"",String.valueOf(内容)
+    console.log(typeof(a))//string
+    //转化成布尔
+    console.log(Boolean(undefined))//转化undefined 是false
+    console.log(Boolean(null))//转化null是false
+    console.log(Boolean(""))//转化""是false
+    console.log(Boolean(0))//转化数字0是false
+    console.log(Boolean(NaN))//转化NaN是false
+    console.log(Boolean(false))//转化false是false
+    //除了以上6个是false其他都是true
+    // 转化成数字
+    console.log(Number(undefined))//转化undefined NaN
+    console.log(Number(null))//转化null是0
+    console.log(Number("123"))//转化"123"是123
+    console.log(Number("00123"))//转化"00123"是123
+    console.log(Number("123abc"))//转化"123abc"是NaN
+    console.log(Number(true))//转化true是1
+    console.log(Number(false))//转化false是0
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

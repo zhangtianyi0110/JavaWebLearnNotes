@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    //onload事件调用的方法
+    function fun1(a, b) {
+      let c = a + b
+      alert('静态注册onclick事件,a+b='+ c)
+    }
+    //动态注册onclick事件
+    window.onload = function (a, b) {
+      //1.获取标签对象,document是js提供的一个文档对象
+      var btn2 = document.getElementById("btn2")
+      //2.通过标签对象.事件名 = function(){}
+      btn2.onclick = function () {
+        alert('动态注册onclick事件,a+b='+ 123)
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- 静态注册 -->
+  <button onclick="fun1(1, 2)">静态注册按钮</button>
+  <button id="btn2">动态注册按钮</button>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    //onsubmit事件调用的方法
+    function fun1(a) {
+      if(a){
+        alert('静态注册onsubmit事件')
+      }else {
+        alert('静态注册onsubmit事件，发现问题')
+        return false
+      }
+    }
+    //动态注册onsubmit事件
+    window.onload = function () {
+      //1.获取标签对象,document是js提供的一个文档对象
+      var form1 = document.getElementById("form1")
+      //2.通过标签对象.事件名 = function(){}a
+      form1.onsubmit = function () {
+          alert('动态注册onsubmit事件，发现问题')
+          return false
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- 静态注册 -->
+  <form action="http://localhost:8080" method="GET" onsubmit="return fun1(false)">
+    <input type="submit" value="静态注册"/>
+  </form>
+  <!-- 动态注册 -->
+  <form action="http://localhost:8080" method="GET" id="form1">
+    <input type="submit" value="动态注册"/>
+  </form>
+</body>
+</html>
+
+
+
+

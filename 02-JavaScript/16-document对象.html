@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    function fun1() {
+      var input1 = document.getElementById("input1")
+      alert("getElementById, input1的值为" + input1.value)
+    }
+    function fun2() {
+      var input2 = document.getElementsByName("input2")
+      alert("getElementsByName, input2的值为" + input2[0].value)
+    }
+    function fun3() {
+      var input3 = document.getElementsByClassName("input3")
+      alert("getElementsByClassName, input3的值为" + input3[0].value)
+    }
+    function fun4() {
+      var arr = document.getElementsByTagName("button")//获取所有的button
+      alert("button个数为" + arr.length)
+    }
+  </script>
+</head>
+<body>
+  用户名：<input type="text " id="input1" value="input1">
+  <button onclick="fun1()">校验getElementById</button>
+  <hr>
+  用户名：<input type="text " name="input2" value="input2">
+  <button onclick="fun2()">校验getElementsByName</button>
+  <hr>
+  用户名：<input type="text "  class="input3" value="input3">
+  <button onclick="fun3()">校验getElementsByClassName</button>
+  <hr>
+  <button onclick="fun4()">校验getElementsByTagName</button>
+</body>
+</html>
+
+
+
+

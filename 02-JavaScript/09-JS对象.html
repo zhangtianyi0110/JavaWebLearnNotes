@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    //对象的定义
+    var obj = new Object() //对象实例(空对象)
+    obj.name = "张三" //给对象定义一个name的属性并赋值为"张三"
+    obj.fun = function () {
+      console.log("obj的姓名是：" + this.name)
+    }
+    //调用
+    obj.fun()
+    // {}形式定义对象
+    var person = {name: "李四"}
+    person.age = 18
+    person.fun = function () {
+      console.log("person的姓名是：" + this.name)
+      console.log("person的年龄是：" + this.age)
+    }
+    person.fun()
+    //取值的方式
+    console.log(person.name)//通过.的方式取值
+    console.log(person["age"])//**通过中括号的方式取值
+    // 添加值:
+    person.sex = "男"
+    person['address'] = "成都"
+		// 删除值:
+    delete person.sex
+    delete person['fun']
+		// 遍历json:
+    for(var i in person){
+      console.log("key:" + i + ", value:" + person[i])
+    }
+			// for(var 变量名 in json对象){}
+			// 	变量名代表键
+			// 	json对象[变量名]  代表值
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

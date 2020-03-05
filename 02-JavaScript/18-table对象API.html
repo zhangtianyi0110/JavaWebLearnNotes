@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    function fun1() {
+      var table =  document.getElementById("table")
+      var rows = table.rows
+      console.log("table对象的行的集合长度为" + rows.length)
+      console.log("table对象的行的集合对象为" + rows)
+      console.log("当前行对象索引为" + rows[0].rowIndex)
+      var cells = rows[0].cells
+      console.log("table对象的行的集合长度为" + cells.length)
+      console.log("table对象的列的集合第一个对象的值为" + cells[0].innerHTML)
+    }
+    function fun2() {
+      var table =  document.getElementById("table")
+      //插入一行，往该表格插入新的一行并且返回插入的这一个行元素，如果不写索引默认是尾部追加
+      var newRow = table.insertRow(0)
+      var newCell = newRow.insertCell()//插入一列
+      newCell.innerHTML = "新插入的一行一列"
+    }
+  </script>
+</head>
+<body>
+  <table id="table" border="1" width="300" height="300" align="center" cellspacing="0">
+    <thead> <!--  thhead表示表头 -->
+      <th>第1列</th>
+      <th>第2列</th><!--  th是字体加粗的td标签一般用在表头 -->
+      <th>第3列</th>
+    </thead>
+    <tr>
+      <td>1-1</td>
+      <td>1-2</td>
+      <td>1-3</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+      <td>2-3</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+      <td>3-3</td>
+    </tr>
+  </table>
+  <hr>
+  <button onclick="fun1()">test属性</button>
+  <button onclick="fun2()">test方法</button>
+</body>
+</html>
+
+
+
+
